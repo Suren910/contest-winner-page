@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Congratulations, Bybit Winner!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: #fff;
       text-align: center;
       background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
@@ -16,7 +18,19 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      animation: fadeIn 2s ease-in;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 50px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+      margin: 30px;
+      animation: fadeIn 2s ease-out;
     }
 
     @keyframes fadeIn {
@@ -24,29 +38,18 @@
       to { opacity: 1; }
     }
 
-    .container {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 40px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: 30px;
-      animation: slideUp 1.5s ease-out;
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
-      color: #f7a600;
+      color: #FFD700;
+      font-weight: 600;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
     p {
       font-size: 20px;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     .highlight {
@@ -57,26 +60,30 @@
     .button {
       display: inline-block;
       margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 15px 40px;
+      font-size: 20px;
       color: white;
       background-color: #f7a600;
       border: none;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(255, 165, 0, 0.6);
     }
 
     .button:hover {
       background-color: #e59c00;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 165, 0, 0.7);
     }
 
     .countdown {
       margin-top: 20px;
-      font-size: 18px;
-      color: #FFA500;
+      font-size: 30px;
+      color: #FF6347;
       font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
   </style>
@@ -90,7 +97,12 @@
       we are thrilled to welcome you as an <span class="highlight">official member</span> of our team as a <span class="highlight">Master Trader</span>!
     </p>
     <p>
-      To celebrate this achievement, we're offering you our premium course with a <span class="highlight">70% discount</span> — a token of our appreciation for your dedication and skill.
+      To celebrate this achievement, we're offering you our premium course with a <span class="highlight">70% discount</span> — a token of our appreciation for your dedication and skill.  
+      This course will be led by **John Doe**, the CEO of Bybit, **Jane Smith**, the world-renowned trader, and **Alex Johnson**, the two-time winner of the Bybit Trading Championship.
+    </p>
+
+    <p>
+      **This is a rare opportunity to learn from the best** in the trading world, and you are one of the few to get access to this exclusive course.
     </p>
 
     <p>
