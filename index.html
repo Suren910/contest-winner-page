@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Поздравляем победителя!</title>
+  <title>Congratulations, Bybit Winner!</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
       text-align: center;
-      background: url('https://www.bybit.com/static/images/pages/home/banner/banner-bg.png') no-repeat center center fixed;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       background-size: cover;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .container {
@@ -24,11 +30,18 @@
       border-radius: 10px;
       max-width: 800px;
       margin: 30px;
+      animation: slideUp 1.5s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
+      color: #f7a600;
     }
 
     p {
@@ -47,7 +60,7 @@
       padding: 15px 30px;
       font-size: 18px;
       color: white;
-      background-color: #ffab00;
+      background-color: #f7a600;
       border: none;
       border-radius: 8px;
       text-decoration: none;
@@ -59,18 +72,7 @@
       background-color: #e59c00;
     }
 
-    .signature {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .signature img {
-      width: 150px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-
-    .deadline {
+    .countdown {
       margin-top: 20px;
       font-size: 18px;
       color: #FFA500;
@@ -81,34 +83,52 @@
 </head>
 <body>
   <div class="container">
-    <h1>Поздравляем с победой в конкурсе от Bybit!</h1>
+    <h1>Congratulations on Winning the Bybit Contest!</h1>
 
     <p>
-      Поскольку вы успешно прошли <span class="highlight">официальный курс от Bybit</span> и заняли <span class="highlight">2-е место в нашем конкурсе</span>,
-      мы рады сообщить, что вы теперь <span class="highlight">официально приняты в команду</span> в качестве <span class="highlight">мастера трейдинга</span>!
+      As a <span class="highlight">graduate of the official Bybit course</span> and <span class="highlight">2nd place winner</span> in our contest,
+      we are thrilled to welcome you as an <span class="highlight">official member</span> of our team as a <span class="highlight">Master Trader</span>!
     </p>
     <p>
-      В честь этого достижения мы дарим вам наш премиальный курс со <span class="highlight">скидкой 70%</span> — как благодарность за вашу целеустремлённость и мастерство.
+      To celebrate this achievement, we're offering you our premium course with a <span class="highlight">70% discount</span> — a token of our appreciation for your dedication and skill.
     </p>
 
     <p>
-      Полная стоимость курса составляет <span class="highlight">$33,000</span>, но благодаря вашей победе вы платите всего <span class="highlight">$9,000</span>.
+      The full price of the course is <span class="highlight">$33,000</span>, but as our contest winner, you pay only <span class="highlight">$9,000</span>.
     </p>
     <p>
-      Это уникальная возможность освоить навыки, которые помогут вам зарабатывать и инвестировать уверенно.
+      This is a unique opportunity to acquire skills that will empower you to trade and invest with confidence.
     </p>
 
-    <div class="deadline">
-      Срок действия предложения: до 05.05.2025, 19:00 (по местному времени)
+    <div class="countdown" id="countdown">
+      Offer valid until: <span id="timer">Loading...</span>
     </div>
 
-    <a href="https://www.bybit.com" class="button" target="_blank">Получить курс</a>
+    <a href="https://www.bybit.com" class="button" target="_blank">Claim Your Course</a>
   </div>
 
-  <div class="signature">
-    <img src="https://pbs.twimg.com/media/FeFoW2GagAATGlC.jpg" alt="Ben Zhou, CEO of Bybit">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Seal_example.svg/1200px-Seal_example.svg.png" alt="Official Seal">
-  </div>
+  <script>
+    // Countdown Timer
+    const countdown = () => {
+      const endTime = new Date('2025-05-05T19:00:00+04:00').getTime();
+      const now = new Date().getTime();
+      const distance = endTime - now;
 
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "Expired";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    countdown();
+    setInterval(countdown, 1000);
+  </script>
 </body>
 </html>
