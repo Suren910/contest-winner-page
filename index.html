@@ -2,23 +2,89 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Поздравляем с победой в конкурсе!</title>
+  <title>Поздравляем победителя!</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 40px; background-color: #f9f9f9; color: #333; }
-    .container { background: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { color: #27ae60; }
-    .code { font-size: 1.5em; color: #e74c3c; font-weight: bold; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(to right, #141e30, #243b55);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 750px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background-color: #ffab00;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e59c00;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Поздравляем!</h1>
-    <p>Вы заняли <strong>2-е место</strong> в конкурсе трейдеров 2025 года!</p>
-    <p>В честь этого вы получаете <strong>скидку 70%</strong> на участие в нашем эксклюзивном <strong>3-месячном курсе трейдинга</strong>.</p>
-    <p>Используйте промокод:</p>
-    <p class="code">WIN70</p>
-    <p>Срок действия промокода: до <strong> 05. 05. 2025</strong></p>
-    <p>Не упустите возможность прокачать свои навыки трейдинга по уникальной цене!</p>
+    <img src="https://cryptologos.cc/logos/bybit-logo.png?v=026" alt="Bybit Logo" class="logo">
+    <h1>Поздравляем с победой в конкурсе от Bybit!</h1>
+    <p>
+      Мы рады сообщить, что <span class="highlight">именно вы</span> стали победителем специального розыгрыша,
+      организованного платформой Bybit! Это не просто удача — это признание вашей активности, стремления к развитию и интереса к миру трейдинга и блокчейн-технологий.
+    </p>
+    <p>
+      В качестве благодарности мы дарим вам <span class="highlight">эксклюзивную скидку 70%</span> на наш флагманский курс по трейдингу.
+    </p>
+    <p>
+      Полная стоимость курса составляет <span class="highlight">$33,000</span>, но благодаря вашей победе вы платите всего <span class="highlight">$9,000</span>.
+    </p>
+    <p>
+      Это уникальная возможность освоить навыки, которые помогут вам зарабатывать и инвестировать уверенно.
+    </p>
+    <p>
+      Не упустите свой шанс — вперед к успеху!
+    </p>
+    <a href="https://www.bybit.com" class="button" target="_blank">Получить курс</a>
   </div>
 </body>
 </html>
