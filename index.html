@@ -118,29 +118,10 @@
 
     <a href="https://www.bybit.com" class="button" target="_blank">Claim Your Course</a>
   </div>
+  <div class="countdown">
+  Offer valid until: <strong>06.05.2025</strong>
+</div>
 
-  <script>
-    // Countdown Timer
-    const countdown = () => {
-      const endTime = new Date('2025-05-05T19:00:00+04:00').getTime();
-      const now = new Date().getTime();
-      const distance = endTime - now;
 
-      if (distance < 0) {
-        document.getElementById("timer").innerHTML = "Expired";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-
-    countdown();
-    setInterval(countdown, 1000);
-  </script>
 </body>
 </html>
